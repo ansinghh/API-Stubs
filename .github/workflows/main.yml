@@ -23,5 +23,8 @@ jobs:
       - name: Install dependencies
         run: pip install fastapi uvicorn pytest httpx
 
+      - name: Verify test file exists
+        run: ls -R   # This prints the directory structure for debugging
+
       - name: Run Tests
-        run: pytest test_main.py
+        run: pytest tests/   # ✅ Updated to run all tests in the `tests/` folder
