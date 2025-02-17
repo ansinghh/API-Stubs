@@ -27,4 +27,4 @@ jobs:
         run: ls -R   # This prints the directory structure for debugging
 
       - name: Run Tests
-        run: pytest tests/   # ✅ Updated to run all tests in the `tests/` folder
+        run: pytest tests/   # ✅ Running tests correctly from the `tests/` directory
