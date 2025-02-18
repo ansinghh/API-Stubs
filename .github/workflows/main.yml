@@ -11,6 +11,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
@@ -23,8 +24,8 @@ jobs:
       - name: Install dependencies
         run: pip install fastapi uvicorn pytest httpx
 
-      - name: Verify test file exists
-        run: ls -R   # This prints the directory structure for debugging
+      - name: Verify directory structure
+        run: ls -R  # Debugging: Ensures correct file placement
 
       - name: Run Tests
-        run: pytest tests/   # ✅ Running tests correctly from the `tests/` directory
+        run: python -m pytest -s tests/
